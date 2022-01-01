@@ -2,7 +2,7 @@
   "name": "alfa_bank_test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sergey-shar.github.io/alfa_bank_test",
+  "homepage": "https://sergey-shar.github.io/alfa_bank_test/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
