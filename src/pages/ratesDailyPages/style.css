@@ -1,0 +1,21 @@
+.container-rates-daly {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 80%;
+  padding: 0 1rem 3rem 0;
+}
+
+.container-table {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  gap: 5rem;
+}
+
+@media (max-width: 768px) {
+  .container-table {
+    flex-wrap: wrap-reverse;
+  }
+}

@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul[class],
+ol[class] {
+  padding: 0;
 }
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: rgb(34,34,34);
+  color: rgb(149,149,149)
+  ;
+}
+
+.wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.link {
+  cursor: pointer;
+  color: rgb(234,33,25);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(149,149,149);
+}
+.link:hover{
+  color: #fff;
+}
+.MuiCircularProgress-svg{
+  color: rgb(234,33,25);
+}
+
+.css-1eplj28{
+  border-radius: 10px;
+  border: 1px solid;
+}
+@media (max-width: 768px) {
+  .css-1eplj28  {
+    border:none;
+  }
+}
+.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
+  color: rgb(234,33,25) !important;
+}
+
+.css-1kty9di-MuiFormLabel-root-MuiInputLabel-root{
+color:rgb(149,149,149) !important;
+}
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+  color:rgb(149,149,149) !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+ border-color:rgb(149,149,149) !important;
+}
+.css-1smlk3z-MuiPaper-root{
+  background-color: rgb(149,149,149) !important;
+}
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{
+  background-color: rgb(234,33,25) !important;;
+}
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root{
+  background-color: rgb(149,149,149) !important;
+} 
