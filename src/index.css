@@ -56,12 +56,12 @@ body {
   color: rgb(234,33,25);
 }
 
-.css-1eplj28{
+.css-1rdvkbe{
   border-radius: 10px;
   border: 1px solid;
 }
 @media (max-width: 768px) {
-  .css-1eplj28  {
+  .css-1rdvkbe {
     border:none;
   }
 }
