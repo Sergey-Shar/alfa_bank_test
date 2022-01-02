@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   flex: 1 1 auto;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 @media (max-width: 768px) {
