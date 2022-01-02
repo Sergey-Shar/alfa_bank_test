@@ -14,13 +14,14 @@ const maskMap = {
   ru: '__.__.____',
 };
 
+
 const BasicDatePicker = () => {
   const [value, setValue] = React.useState(new Date());
   const dispatch = useDispatch();
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} locale={localeMap['ru']}>
-      <DatePicker sx={{ backgraundColor:'#fff'}}
+      <DatePicker 
         mask={maskMap['ru']}
         disableFuture
         label="На дату:"
@@ -32,9 +33,11 @@ const BasicDatePicker = () => {
             payload: format(new Date(newValue), "yyyy-MM-dd"),
           });
         }}
-        renderInput={(params) => <TextField {...params} helperText={null} />}
+        renderInput={(params) => <TextField {...params} color="secondary" focused/>}
+        inputProps={{ style: { color: '#fff'}}}
       />
     </LocalizationProvider>
+ 
   );
 }
 export default BasicDatePicker

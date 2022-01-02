@@ -52,9 +52,6 @@ body {
 .link:hover{
   color: #fff;
 }
-.MuiCircularProgress-svg{
-  color: rgb(234,33,25);
-}
 
 .css-1rdvkbe{
   border-radius: 10px;
@@ -65,25 +62,7 @@ body {
     border:none;
   }
 }
-.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
-  color: rgb(234,33,25) !important;
-}
 
-.css-1kty9di-MuiFormLabel-root-MuiInputLabel-root{
-color:rgb(149,149,149) !important;
+.MuiSvgIcon-root{
+  color:rgb(234,33,25) ;
 }
-.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
-  color:rgb(149,149,149) !important;
-}
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
- border-color:rgb(149,149,149) !important;
-}
-.css-1smlk3z-MuiPaper-root{
-  background-color: rgb(149,149,149) !important;
-}
-.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{
-  background-color: rgb(234,33,25) !important;;
-}
-.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root{
-  background-color: rgb(149,149,149) !important;
-} 

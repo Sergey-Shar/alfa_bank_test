@@ -39,7 +39,7 @@ const RatesDaily = () => {
   return (
     <>
       <div className="container-rates-daly">
-        <Link className="link" to="/">
+        <Link className="link" to={"/"}>
           Главная
         </Link>
         <Title
