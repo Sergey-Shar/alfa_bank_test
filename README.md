@@ -1,4 +1,4 @@
-# Официальный курс беларуского рубля по отношению к иностранным валютам.
+# Официальный курс беларусского рубля по отношению к иностранным валютам.
 
 ## О проекте:
 
@@ -10,17 +10,17 @@
 
 ### Для разработки приложения я использовал следующие инструменты:
 
-*[React.js](https://reactjs.org/)
+* [React.js](https://reactjs.org/)
 
-*[Redux](https://redux.js.org/)
+* [Redux](https://redux.js.org/)
 
-*[React-router-dom](https://v5.reactrouter.com/)
+* [React-router-dom](https://v5.reactrouter.com/)
 
-*[Axios.js](https://axios-http.com/)
+* [Axios.js](https://axios-http.com/)
 
-*[Material-UI](https://mui.com/)
+* [Material-UI](https://mui.com/)
 
-*[Date-fns](https://date-fns.org/)
+* [Date-fns](https://date-fns.org/)
 
 
 Для того что бы развернуть приложение на хостинге Git Hub я использовал дополнительный пакет [Gh-pages](https://www.npmjs.com/package/gh-pages).
