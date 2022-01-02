@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./reducer";
 import { ThemeProvider, createTheme } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -21,12 +22,12 @@ const theme = createTheme({
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <React.StrictMode>
+      <BrowserRouter basename='https://sergey-shar.github.io/alfa_bank_test/'>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <Navigation />
       </Provider>
     </ThemeProvider>
-  </React.StrictMode>,
+    </BrowserRouter>,
   document.getElementById("root")
 );
