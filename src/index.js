@@ -6,7 +6,6 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./reducer";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { BrowserRouter } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -22,12 +21,10 @@ const theme = createTheme({
 const store = createStore(reducer);
 
 ReactDOM.render(
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <Navigation />
       </Provider>
-    </ThemeProvider>
-    </BrowserRouter>,
+    </ThemeProvider>,
   document.getElementById("root")
 );
