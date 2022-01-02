@@ -1,12 +1,12 @@
 import { format } from "date-fns";
 
-const initionalState = {
+const initialState = {
   page: 0,
   rowsPerPage: 5,
   date: format(new Date(), "yyyy-MM-dd"),
 };
 
-const reducer = (state = initionalState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "CHANGE_PAGE":
       return {
