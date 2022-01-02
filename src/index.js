@@ -22,7 +22,7 @@ const theme = createTheme({
 const store = createStore(reducer);
 
 ReactDOM.render(
-      <BrowserRouter basename='https://sergey-shar.github.io/alfa_bank_test/'>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <Navigation />
