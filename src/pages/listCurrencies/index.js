@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import UnstyledTable from "../../components/Table";
 import axios from "axios";
 import { useSelector } from "react-redux";
@@ -95,4 +95,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default memo(MainPage);

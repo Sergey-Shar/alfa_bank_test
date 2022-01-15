@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import UnstyledTable from "../../components/Table";
 import axios from "axios";
 import { useSelector } from "react-redux";
@@ -95,4 +95,4 @@ const RatesDaily = () => {
   );
 };
 
-export default RatesDaily;
+export default memo(RatesDaily);

@@ -1,12 +1,12 @@
-import * as React from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import React, { memo } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
-const  CircularIndeterminate = () => {
+const CircularIndeterminate = () => {
   return (
-    <Box sx={{ display: 'flex',color:"rgb(234,33,25)" }}>
+    <Box sx={{ display: "flex", color: "rgb(234,33,25)" }}>
       <CircularProgress />
     </Box>
   );
-}
-export default  CircularIndeterminate
+};
+export default memo(CircularIndeterminate);

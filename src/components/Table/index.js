@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { memo, useCallback } from "react";
 import { styled } from "@mui/system";
 import TablePaginationUnstyled from "@mui/base/TablePaginationUnstyled";
 import { useSelector, useDispatch } from "react-redux";
@@ -16,8 +16,8 @@ const Root = styled("div")`
     text-align: left;
     padding: 8px;
   }
-  td{
-    color:#fff
+  td {
+    color: #fff;
   }
 `;
 
@@ -27,7 +27,6 @@ const CustomTablePagination = styled(TablePaginationUnstyled)`
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -66,26 +65,32 @@ const UnstyledTable = ({ tr, data, tBody }) => {
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - data.length) : 0;
 
-  const handleChangePage = (event, newPage) => {
-    dispatch({
-      type: "CHANGE_PAGE",
-      payload: newPage,
-    });
-  };
+  const handleChangePage = useCallback(
+    (event, newPage) => {
+      dispatch({
+        type: "CHANGE_PAGE",
+        payload: newPage,
+      });
+    },
+    [dispatch]
+  );
 
-  const handleChangeRowsPerPage = (event) => {
-    dispatch({
-      type: "CHANGE_ROWS_PER_PAGE",
-      payload: parseInt(event.target.value, 10),
-    });
-    dispatch({
-      type: "CHANGE_ROWS_PAGE",
-      payload: 0,
-    });
-  };
+  const handleChangeRowsPerPage = useCallback(
+    (event) => {
+      dispatch({
+        type: "CHANGE_ROWS_PER_PAGE",
+        payload: parseInt(event.target.value, 10),
+      });
+      dispatch({
+        type: "CHANGE_ROWS_PAGE",
+        payload: 0,
+      });
+    },
+    [dispatch]
+  );
 
   return (
-    <Root sx={{ maxWidth: "100%"}}>
+    <Root sx={{ maxWidth: "100%" }}>
       <table aria-label="custom pagination table">
         <thead>{tr}</thead>
         {tBody}
@@ -120,4 +125,4 @@ const UnstyledTable = ({ tr, data, tBody }) => {
   );
 };
 
-export default UnstyledTable;
+export default memo(UnstyledTable);

@@ -1,28 +1,27 @@
-import * as React from "react";
+import React, { useState, memo } from "react";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DatePicker from "@mui/lab/DatePicker";
 import { format } from "date-fns";
-import ruLocale from 'date-fns/locale/ru';
+import ruLocale from "date-fns/locale/ru";
 import { useDispatch } from "react-redux";
 
 const localeMap = {
   ru: ruLocale,
 };
 const maskMap = {
-  ru: '__.__.____',
+  ru: "__.__.____",
 };
 
-
 const BasicDatePicker = () => {
-  const [value, setValue] = React.useState(new Date());
+  const [value, setValue] = useState(new Date());
   const dispatch = useDispatch();
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns} locale={localeMap['ru']}>
-      <DatePicker 
-        mask={maskMap['ru']}
+    <LocalizationProvider dateAdapter={AdapterDateFns} locale={localeMap["ru"]}>
+      <DatePicker
+        mask={maskMap["ru"]}
         disableFuture
         label="На дату:"
         value={value}
@@ -33,11 +32,12 @@ const BasicDatePicker = () => {
             payload: format(new Date(newValue), "yyyy-MM-dd"),
           });
         }}
-        renderInput={(params) => <TextField {...params} color="secondary" focused/>}
-        inputProps={{ style: { color: '#fff'}}}
+        renderInput={(params) => (
+          <TextField {...params} color="secondary" focused />
+        )}
+        inputProps={{ style: { color: "#fff" } }}
       />
     </LocalizationProvider>
- 
   );
-}
-export default BasicDatePicker
+};
+export default memo(BasicDatePicker);

@@ -1,9 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Title = ({text, name}) => {
-    return(
-        <h2 className={name}>{text}</h2>
-    )
-}
+const Title = ({ text, name }) => {
+  return <h2 className={name}>{text}</h2>;
+};
 
-export default Title
+export default memo(Title);
