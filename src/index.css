@@ -53,16 +53,6 @@ body {
   color: #fff;
 }
 
-.css-1rdvkbe{
-  border-radius: 10px;
-  border: 1px solid;
-}
-@media (max-width: 768px) {
-  .css-1rdvkbe {
-    border:none;
-  }
-}
-
 .MuiSvgIcon-root{
   color:rgb(234,33,25) ;
 }

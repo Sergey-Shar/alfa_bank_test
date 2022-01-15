@@ -90,7 +90,7 @@ const UnstyledTable = ({ tr, data, tBody }) => {
   );
 
   return (
-    <Root sx={{ maxWidth: "100%" }}>
+    <Root sx={{ maxWidth: "100%" , border:{xs:'none', md:'1px solid red', borderRadius: '10px'}}}>
       <table aria-label="custom pagination table">
         <thead>{tr}</thead>
         {tBody}
